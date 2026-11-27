@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método &amp; Rigor Asesorías · Asesoría académica y de proyectos</title>
+<meta name="description" content="Asesoría en trabajos de grado y tesis, formulación de proyectos de inversión (MGA, SGR, PDET), corrección de estilo con normas APA e ICONTEC y análisis de datos. Bogotá, Colombia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B2A4A'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' font-style='italic' fill='%23C9A24E'%3E%26%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B2A4A; --navy-2:#24365E; --gold:#B8893A; --gold-text:#8A6A2B; --gold-light:#C9A24E;
+    --ivory:#F8F5EE; --line:#E5DFD0; --ink:#1B2A4A; --muted:#4A5568;
+    --serif:'Cormorant Garamond', Georgia, serif; --sans:'Source Sans 3', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);font-size:18px;line-height:1.6}
+  a{color:var(--navy)} a:hover{color:var(--gold-text)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-text);font-weight:600;margin:0 0 12px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
+  h2{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
+  h3{font-size:26px;margin-bottom:8px}
+  p{margin:0 0 16px}
+
+  /* Logo C */
+  .logo{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;line-height:1}
+  .logo .w{font-family:var(--serif);font-weight:700;letter-spacing:1px}
+  .logo .amp{display:flex;align-items:center;gap:8px}
+  .logo .amp i{display:block;height:1.5px;background:var(--gold)}
+  .logo .amp span{font-family:var(--serif);font-style:italic;color:var(--gold)}
+  .logo .sub{letter-spacing:5px;color:var(--gold-text);font-weight:600;margin-top:4px}
+  .logo.sm .w{font-size:19px} .logo.sm .amp i{width:22px} .logo.sm .amp span{font-size:16px} .logo.sm .sub{font-size:8px;letter-spacing:3px}
+  .logo.lg .w{font-size:clamp(44px,7vw,72px)} .logo.lg .amp{gap:14px;margin:6px 0} .logo.lg .amp i{width:clamp(48px,8vw,90px)} .logo.lg .amp span{font-size:clamp(36px,5vw,56px)} .logo.lg .sub{font-size:14px;letter-spacing:8px;margin-top:10px}
+
+  header{position:sticky;top:0;z-index:10;background:rgba(248,245,238,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
+  .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;flex-wrap:wrap}
+  .nav ul a{text-decoration:none;font-weight:600;font-size:16px}
+  .btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;padding:14px 28px;border-radius:6px;font-size:17px;min-height:44px}
+  .btn:hover{background:var(--navy-2);color:#fff}
+  .btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+  .btn.ghost:hover{background:var(--navy);color:#fff}
+
+  .hero{padding:96px 0 88px;text-align:center;border-bottom:1px solid var(--line)}
+  .hero .slogan{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,32px);margin:36px auto 16px;max-width:760px}
+  .hero .lead{color:var(--muted);max-width:680px;margin:0 auto 36px}
+  .hero .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  section{padding:88px 0}
+  .about{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;align-items:start}
+  .facts{display:grid;gap:16px}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}
+  .fact strong{display:block;font-family:var(--serif);font-size:24px}
+  .fact span{color:var(--muted);font-size:16px}
+
+  .services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+  .card{border:1px solid var(--line);border-radius:8px;padding:32px;background:var(--ivory)}
+  .card .num{font-family:var(--serif);font-size:20px;color:var(--gold-text);font-weight:700}
+  .card p{color:var(--muted);font-size:17px}
+  .card ul{margin:0;padding-left:20px;font-size:16px}
+  .card li{margin-bottom:6px}
+
+  .steps{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:s}
+  .steps li{counter-increment:s;border-top:2px solid var(--gold);padding-top:16px}
+  .steps li::before{content:counter(s);display:block;font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold-text);line-height:1;margin-bottom:8px}
+  .steps strong{display:block;font-size:18px;margin-bottom:4px}
+  .steps span{color:var(--muted);font-size:16px}
+
+  .ethics{background:var(--navy);color:#F1ECE0}
+  .ethics h2{color:#fff}
+  .ethics .eyebrow{color:var(--gold-light)}
+  .ethics ul{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .ethics li{border:1px solid rgba(201,162,78,.45);border-radius:8px;padding:24px;font-size:17px}
+  .ethics li strong{display:block;font-family:var(--serif);font-size:22px;color:#fff;margin-bottom:6px}
+
+  .contact{text-align:center}
+  .contact .box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:48px 24px;max-width:760px;margin:0 auto}
+  .contact .mail{font-family:var(--serif);font-size:clamp(26px,4vw,36px);font-weight:600;display:inline-block;margin:8px 0 24px}
+
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+  footer .logo{margin-bottom:16px}
+
+  @media (max-width:860px){
+    .about,.grid,.ethics ul{grid-template-columns:minmax(0,1fr)}
+    .steps{grid-template-columns:minmax(0,1fr)}
+    section{padding:64px 0}
+    .hero{padding:64px 0}
+    .nav ul{gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="Principal">
+    <a class="logo sm" href="#inicio" aria-label="Método &amp; Rigor Asesorías, inicio">
+      <span class="w">MÉTODO</span>
+      <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
+      <span class="w">RIGOR</span>
+    </a>
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <h1 class="logo lg" aria-label="Método &amp; Rigor Asesorías">
+        <span class="w">MÉTODO</span>
+        <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
+        <span class="w">RIGOR</span>
+        <span class="sub">ASESORÍAS</span>
+      </h1>
+      <p class="slogan">Rigor académico con acompañamiento humano</p>
+      <p class="lead">Acompañamos a estudiantes de pregrado y posgrado, investigadores y entidades públicas a construir trabajos académicos y proyectos sólidos, desde la idea inicial hasta la sustentación.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">Solicitar cotización</a>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">Quiénes somos</p>
+        <h2>Le enseñamos el método para que su trabajo salga bien</h2>
+        <p>No hacemos el trabajo por usted: lo orientamos, revisamos y acompañamos para que lo haga con rigor y con autonomía. Cada asesoría se ajusta a su programa, a su universidad y a sus tiempos.</p>
+        <p>Atendemos desde Bogotá a estudiantes y entidades de todo el país, en sesiones virtuales o presenciales.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Más de 20 años</strong><span>de experiencia en docencia universitaria y dirección de tesis de especialización y maestría.</span></div>
+        <div class="fact"><strong>Proyectos públicos</strong><span>Formulación y evaluación de proyectos de inversión en MGA, SGR y PDET.</span></div>
+        <div class="fact"><strong>Fuentes verificadas</strong><span>Trabajamos solo con bases de datos académicas reconocidas.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <p class="eyebrow">Servicios</p>
+      <h2>Cuatro líneas de acompañamiento</h2>
+      <p style="color:var(--muted);max-width:680px">Cada servicio se contrata completo o por etapas, según lo que usted necesite.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>Asesoría en trabajos de grado y tesis</h3>
+          <p>Acompañamiento metodológico para pregrado, especialización y maestría.</p>
+          <ul>
+            <li>Problema, pregunta de investigación y objetivos</li>
+            <li>Marco teórico y estado del arte</li>
+            <li>Diseño metodológico e instrumentos</li>
+            <li>Revisión de avances con observaciones detalladas</li>
+            <li>Preparación de la sustentación</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="num">02</span>
+          <h3>Formulación y evaluación de proyectos</h3>
+          <p>Asesoría técnica para entidades territoriales, organizaciones y profesionales.</p>
+          <ul>
+            <li>Formulación en la Metodología General Ajustada (MGA)</li>
+            <li>Estructuración para el Sistema General de Regalías</li>
+            <li>Proyectos PDET y de planes de desarrollo</li>
+            <li>Evaluación financiera, económica y social</li>
+            <li>Revisión previa a la radicación</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="num">03</span>
+          <h3>Corrección de estilo y normas</h3>
+          <p>Para que su documento cumpla los requisitos de su programa o revista.</p>
+          <ul>
+            <li>Corrección ortográfica, gramatical y de redacción académica</li>
+            <li>Normas APA (7.ª edición) e ICONTEC</li>
+            <li>Revisión de citas y referencias</li>
+            <li>Orientación en el uso correcto de fuentes</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="num">04</span>
+          <h3>Análisis de datos e instrumentos</h3>
+          <p>Apoyo en la parte cuantitativa y cualitativa de su investigación.</p>
+          <ul>
+            <li>Diseño y validación de encuestas y entrevistas</li>
+            <li>Análisis estadístico descriptivo e inferencial</li>
+            <li>Interpretación de resultados, tablas y gráficos</li>
+            <li>Explicación de los análisis para la sustentación</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <div class="wrap">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2>Cinco pasos, de la primera conversación a la entrega</h2>
+      <ol class="steps">
+        <li><strong>Diagnóstico</strong><span>Nos cuenta en qué etapa está, qué le pide su programa y su fecha límite.</span></li>
+        <li><strong>Propuesta</strong><span>Le enviamos un plan con alcance, cronograma y valor.</span></li>
+        <li><strong>Acompañamiento</strong><span>Sesiones y revisión de avances con observaciones escritas.</span></li>
+        <li><strong>Revisión final</strong><span>Coherencia, normas de presentación y calidad de las fuentes.</span></li>
+        <li><strong>Entrega</strong><span>Preparación para la sustentación o la radicación.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ethics">
+    <div class="wrap">
+      <p class="eyebrow">Nuestro compromiso</p>
+      <h2>Integridad académica ante todo</h2>
+      <ul>
+        <li><strong>Su autoría</strong>El trabajo es siempre suyo: orientamos, revisamos y enseñamos, no suplantamos.</li>
+        <li><strong>Fuentes reales</strong>No inventamos datos, citas ni referencias; toda fuente se verifica.</li>
+        <li><strong>Confidencialidad</strong>Su información y sus documentos se manejan con total reserva.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <div class="box">
+        <p class="eyebrow">Cotización sin costo</p>
+        <h2>Cuéntenos sobre su proyecto</h2>
+        <p style="color:var(--muted)">Escríbanos con su programa, la etapa en la que está y su fecha de entrega. Le respondemos con una propuesta en un máximo de 48 horas hábiles.</p>
+        <a class="mail" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">contacto@metodoyrigor.co</a><br>
+        <a class="btn" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">Escribir un correo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo sm" href="#inicio" aria-label="Volver al inicio">
+      <span class="w">MÉTODO</span>
+      <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
+      <span class="w">RIGOR</span>
+      <span class="sub">ASESORÍAS</span>
+    </a>
+    <p>Bogotá, Colombia · <a href="mailto:contacto@metodoyrigor.co">contacto@metodoyrigor.co</a></p>
+    <p>© 2026 Método &amp; Rigor Asesorías</p>
+  </div>
+</footer>
+
+</body>
+</html>
