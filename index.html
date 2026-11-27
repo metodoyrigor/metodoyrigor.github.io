@@ -3,256 +3,372 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Método &amp; Rigor Asesorías · Asesoría académica y de proyectos</title>
+<title>Método &amp; Rigor Asesorías</title>
 <meta name="description" content="Asesoría en trabajos de grado y tesis, formulación de proyectos de inversión (MGA, SGR, PDET), corrección de estilo con normas APA e ICONTEC y análisis de datos. Bogotá, Colombia.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231B2A4A'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' font-style='italic' fill='%23C9A24E'%3E%26%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2313233F'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23D4AF5F'%3E%26%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,600&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#1B2A4A; --navy-2:#24365E; --gold:#B8893A; --gold-text:#8A6A2B; --gold-light:#C9A24E;
-    --ivory:#F8F5EE; --line:#E5DFD0; --ink:#1B2A4A; --muted:#4A5568;
-    --serif:'Cormorant Garamond', Georgia, serif; --sans:'Source Sans 3', system-ui, sans-serif;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--ivory);font-size:18px;line-height:1.6}
-  a{color:var(--navy)} a:hover{color:var(--gold-text)}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-  .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-text);font-weight:600;margin:0 0 12px}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
-  h2{font-size:clamp(32px,4vw,44px);margin-bottom:16px}
-  h3{font-size:26px;margin-bottom:8px}
-  p{margin:0 0 16px}
+/*
+  VOICE: serio y cercano, como un buen director de tesis.
+  IDEA: el camino de una tesis, que sube capítulo a capítulo hasta la sustentación.
+  PICTURE: escalera de documentos anotados en la portada; ruta del proceso más abajo.
+  COLOUR and TYPE: azul profundo dominante, papel blanco, dorado como acento; Fraunces + Source Sans 3; logo en Cormorant.
+  LAYOUT: bandas a todo el ancho que alternan azul, blanco y azul claro.
+*/
+:root{
+  --navy:#13233F; --navy-2:#1C3157; --navy-3:#27416E;
+  --gold:#D4AF5F; --gold-deep:#8A6A2B;
+  --paper:#FFFFFF; --sky:#EAF0F8; --ink:#13233F; --muted:#4F5F78; --line:#D8E0EC;
+  --serif:'Fraunces', Georgia, serif; --logo:'Cormorant Garamond', Georgia, serif; --sans:'Source Sans 3', system-ui, sans-serif;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font:17px/1.6 var(--sans);color:var(--ink);background:var(--paper);overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,4.2vw,48px);margin-bottom:14px}
+h3{font-size:22px;line-height:1.2;margin-bottom:8px}
+p{margin:0 0 14px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 max(4vw,20px)}
+.band{padding:clamp(64px,8vw,112px) 0}
+.lead{font-size:19px;color:var(--muted);max-width:640px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
 
-  /* Logo C */
-  .logo{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;line-height:1}
-  .logo .w{font-family:var(--serif);font-weight:700;letter-spacing:1px}
-  .logo .amp{display:flex;align-items:center;gap:8px}
-  .logo .amp i{display:block;height:1.5px;background:var(--gold)}
-  .logo .amp span{font-family:var(--serif);font-style:italic;color:var(--gold)}
-  .logo .sub{letter-spacing:5px;color:var(--gold-text);font-weight:600;margin-top:4px}
-  .logo.sm .w{font-size:19px} .logo.sm .amp i{width:22px} .logo.sm .amp span{font-size:16px} .logo.sm .sub{font-size:8px;letter-spacing:3px}
-  .logo.lg .w{font-size:clamp(44px,7vw,72px)} .logo.lg .amp{gap:14px;margin:6px 0} .logo.lg .amp i{width:clamp(48px,8vw,90px)} .logo.lg .amp span{font-size:clamp(36px,5vw,56px)} .logo.lg .sub{font-size:14px;letter-spacing:8px;margin-top:10px}
+/* Logo */
+.logo{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;line-height:1;color:#fff}
+.logo b{font-family:var(--logo);font-weight:700;font-size:20px;letter-spacing:1px}
+.logo .amp{display:flex;align-items:center;gap:6px;margin:1px 0}
+.logo .amp i{display:block;width:20px;height:1.5px;background:var(--gold)}
+.logo .amp span{font-family:var(--logo);font-style:italic;font-weight:600;color:var(--gold);font-size:17px}
 
-  header{position:sticky;top:0;z-index:10;background:rgba(248,245,238,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:1120px;margin:0 auto;flex-wrap:wrap}
-  .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;flex-wrap:wrap}
-  .nav ul a{text-decoration:none;font-weight:600;font-size:16px}
-  .btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;padding:14px 28px;border-radius:6px;font-size:17px;min-height:44px}
-  .btn:hover{background:var(--navy-2);color:#fff}
-  .btn.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
-  .btn.ghost:hover{background:var(--navy);color:#fff}
+/* Header */
+header{position:sticky;top:0;z-index:20;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px max(4vw,20px);max-width:1200px;margin:0 auto}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:#DCE4F1;text-decoration:none;font-weight:600;font-size:16px;padding:10px 0;display:inline-block}
+.nav ul a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 26px;border-radius:999px;font-weight:600;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#E2C27A}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.nav .btn{min-height:42px;padding:8px 20px;font-size:15px}
 
-  .hero{padding:96px 0 88px;text-align:center;border-bottom:1px solid var(--line)}
-  .hero .slogan{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3vw,32px);margin:36px auto 16px;max-width:760px}
-  .hero .lead{color:var(--muted);max-width:680px;margin:0 auto 36px}
-  .hero .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* Hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 78% 40%,rgba(212,175,95,.16),transparent 70%),radial-gradient(50% 60% at 10% 100%,rgba(39,65,110,.9),transparent 70%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;align-items:center;padding-top:clamp(48px,6vw,88px);padding-bottom:clamp(48px,6vw,88px)}
+.hero h1{font-size:clamp(40px,5.4vw,66px);margin-bottom:20px}
+.hero .slogan{font-family:var(--logo);font-style:italic;font-size:clamp(22px,2.4vw,28px);color:var(--gold);margin-bottom:18px}
+.hero .lead{color:#C9D4E6}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.hero-art{width:100%;height:auto;display:block}
+.hero-art .step{transform-box:fill-box;transform-origin:bottom}
+@media (prefers-reduced-motion:no-preference){
+  .hero-art .step{animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
+  .hero-art .s2{animation-delay:.12s}.hero-art .s3{animation-delay:.24s}.hero-art .s4{animation-delay:.36s}.hero-art .s5{animation-delay:.48s}
+  .hero-art .cap{animation:rise .7s .7s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
 
-  section{padding:88px 0}
-  .about{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;align-items:start}
-  .facts{display:grid;gap:16px}
-  .fact{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}
-  .fact strong{display:block;font-family:var(--serif);font-size:24px}
-  .fact span{color:var(--muted);font-size:16px}
+/* Audiences strip */
+.who{background:var(--navy-2);color:#E6ECF6}
+.who .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.who div{display:flex;gap:16px;align-items:flex-start;padding:28px 24px;border-left:1px solid rgba(255,255,255,.1)}
+.who div:first-child{border-left:0}
+.who svg{flex:none}
+.who strong{display:block;color:#fff;font-size:18px}
+.who span{font-size:15px;color:#B9C6DB}
 
-  .services{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
-  .card{border:1px solid var(--line);border-radius:8px;padding:32px;background:var(--ivory)}
-  .card .num{font-family:var(--serif);font-size:20px;color:var(--gold-text);font-weight:700}
-  .card p{color:var(--muted);font-size:17px}
-  .card ul{margin:0;padding-left:20px;font-size:16px}
-  .card li{margin-bottom:6px}
+/* Services */
+.services-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:48px}
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.svc article{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:32px 32px 28px;display:grid;grid-template-columns:72px minmax(0,1fr);gap:20px;transition:border-color .2s}
+.svc article:hover{border-color:var(--gold)}
+.svc .ico{width:72px;height:72px;border-radius:18px;background:var(--sky);display:grid;place-items:center}
+.svc p{color:var(--muted);font-size:16px}
+.svc ul{margin:0;padding:0;list-style:none;font-size:16px}
+.svc li{padding:7px 0 7px 26px;border-top:1px solid var(--line);position:relative}
+.svc li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:2px solid var(--gold-deep);border-bottom:2px solid var(--gold-deep);transform:rotate(-45deg)}
 
-  .steps{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;counter-reset:s}
-  .steps li{counter-increment:s;border-top:2px solid var(--gold);padding-top:16px}
-  .steps li::before{content:counter(s);display:block;font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold-text);line-height:1;margin-bottom:8px}
-  .steps strong{display:block;font-size:18px;margin-bottom:4px}
-  .steps span{color:var(--muted);font-size:16px}
+/* Process */
+.process{background:var(--sky)}
+.path{position:relative;margin-top:56px}
+.path svg.line{position:absolute;left:0;right:0;top:28px;width:100%;height:4px}
+.path ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;position:relative}
+.path li{text-align:center}
+.path .dot{width:60px;height:60px;border-radius:50%;margin:0 auto 18px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:26px;border:4px solid var(--sky);box-shadow:0 0 0 2px var(--navy)}
+.path li:last-child .dot{background:var(--gold);color:var(--navy);box-shadow:0 0 0 2px var(--gold)}
+.path strong{display:block;font-size:18px;margin-bottom:4px}
+.path span{color:var(--muted);font-size:15px;display:block;max-width:220px;margin:0 auto}
 
-  .ethics{background:var(--navy);color:#F1ECE0}
-  .ethics h2{color:#fff}
-  .ethics .eyebrow{color:var(--gold-light)}
-  .ethics ul{list-style:none;padding:0;margin:32px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-  .ethics li{border:1px solid rgba(201,162,78,.45);border-radius:8px;padding:24px;font-size:17px}
-  .ethics li strong{display:block;font-family:var(--serif);font-size:22px;color:#fff;margin-bottom:6px}
+/* Ethics */
+.ethics{background:var(--navy);color:#DCE4F1}
+.ethics .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:center}
+.ethics h2{color:#fff}
+.seal{display:grid;gap:18px}
+.seal div{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start;padding:22px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(212,175,95,.35)}
+.seal strong{display:block;color:#fff;font-family:var(--serif);font-size:21px;font-weight:600;margin-bottom:2px}
 
-  .contact{text-align:center}
-  .contact .box{background:#fff;border:1px solid var(--line);border-radius:8px;padding:48px 24px;max-width:760px;margin:0 auto}
-  .contact .mail{font-family:var(--serif);font-size:clamp(26px,4vw,36px);font-weight:600;display:inline-block;margin:8px 0 24px}
+/* Contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.contact .mail{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);color:var(--navy);text-decoration-color:var(--gold);text-underline-offset:6px}
+form{background:var(--sky);border-radius:24px;padding:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+input,select,textarea{width:100%;font:16px var(--sans);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(212,175,95,.45)}
+textarea{min-height:110px;resize:vertical}
+.full{grid-column:1/-1}
+form .btn{background:var(--navy);color:#fff;justify-self:start}
+form .btn:hover{background:var(--navy-3)}
+.note{font-size:14px;color:var(--muted);margin:0}
+#ok{display:none;grid-column:1/-1;background:#fff;border-left:4px solid var(--gold);padding:12px 16px;border-radius:8px;font-size:15px}
 
-  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
-  footer .logo{margin-bottom:16px}
+footer{background:var(--navy);color:#B9C6DB;padding:40px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer a{color:#fff}
 
-  @media (max-width:860px){
-    .about,.grid,.ethics ul{grid-template-columns:minmax(0,1fr)}
-    .steps{grid-template-columns:minmax(0,1fr)}
-    section{padding:64px 0}
-    .hero{padding:64px 0}
-    .nav ul{gap:16px}
-  }
+@media (max-width:900px){
+  .hero .wrap,.services-head,.ethics .wrap,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .svc{grid-template-columns:minmax(0,1fr)}
+  .who .wrap{grid-template-columns:minmax(0,1fr)}
+  .who div{border-left:0;border-top:1px solid rgba(255,255,255,.1);padding:20px 0}
+  .who div:first-child{border-top:0}
+  .path svg.line{display:none}
+  .path ol{grid-template-columns:minmax(0,1fr);gap:24px}
+  .path li{display:grid;grid-template-columns:60px minmax(0,1fr);gap:16px;text-align:left;align-items:start}
+  .path .dot{margin:0}
+  .path span{margin:0}
+  .nav ul{gap:18px}
+}
+@media (max-width:600px){
+  .svc article{grid-template-columns:minmax(0,1fr)}
+  form{grid-template-columns:minmax(0,1fr);padding:22px}
+  .nav .btn{display:none}
+}
 </style>
 </head>
 <body>
 
 <header>
   <nav class="nav" aria-label="Principal">
-    <a class="logo sm" href="#inicio" aria-label="Método &amp; Rigor Asesorías, inicio">
-      <span class="w">MÉTODO</span>
-      <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
-      <span class="w">RIGOR</span>
+    <a class="logo" href="#inicio" aria-label="Método &amp; Rigor Asesorías, inicio">
+      <b>MÉTODO</b><span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span><b>RIGOR</b>
     </a>
     <ul>
-      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#proceso">Cómo trabajamos</a></li>
+      <li><a href="#compromiso">Compromiso</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
+    <a class="btn btn-gold" href="#contacto">Pedir cotización</a>
   </nav>
 </header>
 
 <main>
   <section class="hero" id="inicio">
     <div class="wrap">
-      <h1 class="logo lg" aria-label="Método &amp; Rigor Asesorías">
-        <span class="w">MÉTODO</span>
-        <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
-        <span class="w">RIGOR</span>
-        <span class="sub">ASESORÍAS</span>
-      </h1>
-      <p class="slogan">Rigor académico con acompañamiento humano</p>
-      <p class="lead">Acompañamos a estudiantes de pregrado y posgrado, investigadores y entidades públicas a construir trabajos académicos y proyectos sólidos, desde la idea inicial hasta la sustentación.</p>
-      <div class="ctas">
-        <a class="btn" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">Solicitar cotización</a>
-        <a class="btn ghost" href="#servicios">Ver servicios</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="nosotros">
-    <div class="wrap about">
       <div>
-        <p class="eyebrow">Quiénes somos</p>
-        <h2>Le enseñamos el método para que su trabajo salga bien</h2>
-        <p>No hacemos el trabajo por usted: lo orientamos, revisamos y acompañamos para que lo haga con rigor y con autonomía. Cada asesoría se ajusta a su programa, a su universidad y a sus tiempos.</p>
-        <p>Atendemos desde Bogotá a estudiantes y entidades de todo el país, en sesiones virtuales o presenciales.</p>
+        <h1>Su tesis, de la primera idea a la sustentación</h1>
+        <p class="slogan">Rigor académico con acompañamiento humano</p>
+        <p class="lead">Asesoramos a estudiantes de pregrado y posgrado, investigadores y entidades públicas para construir trabajos y proyectos sólidos, paso a paso y con el método correcto.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#contacto">Pedir cotización sin costo</a>
+          <a class="btn btn-line" href="#servicios">Ver servicios</a>
+        </div>
       </div>
-      <div class="facts">
-        <div class="fact"><strong>Más de 20 años</strong><span>de experiencia en docencia universitaria y dirección de tesis de especialización y maestría.</span></div>
-        <div class="fact"><strong>Proyectos públicos</strong><span>Formulación y evaluación de proyectos de inversión en MGA, SGR y PDET.</span></div>
-        <div class="fact"><strong>Fuentes verificadas</strong><span>Trabajamos solo con bases de datos académicas reconocidas.</span></div>
-      </div>
+
+      <svg class="hero-art" viewBox="0 0 600 470" role="img" aria-label="Escalera de cinco capítulos de una tesis que sube hasta un birrete de grado">
+        <defs>
+          <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E6ECF6"/></linearGradient>
+          <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#B9C6DB"/><stop offset="1" stop-color="#8FA0BD"/></linearGradient>
+          <g id="lines"><rect x="16" y="22" width="70" height="5" rx="2.5" fill="#C7D2E3"/><rect x="16" y="34" width="56" height="5" rx="2.5" fill="#C7D2E3"/><rect x="16" y="46" width="64" height="5" rx="2.5" fill="#C7D2E3"/></g>
+        </defs>
+        <ellipse cx="300" cy="448" rx="270" ry="14" fill="#0B1830" opacity=".55"/>
+        <g class="step s1"><rect x="40" y="350" width="104" height="96" rx="6" fill="url(#side)"/><rect x="34" y="340" width="104" height="96" rx="6" fill="url(#pg)"/><use href="#lines" x="34" y="340"/><text x="86" y="420" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" fill="#13233F">Planteamiento</text></g>
+        <g class="step s2"><rect x="146" y="290" width="104" height="156" rx="6" fill="url(#side)"/><rect x="140" y="280" width="104" height="156" rx="6" fill="url(#pg)"/><use href="#lines" x="140" y="280"/><path d="M156 342 q20 -10 40 0 t40 0" stroke="#D4AF5F" stroke-width="3" fill="none" stroke-linecap="round"/><text x="192" y="420" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" fill="#13233F">Marco teórico</text></g>
+        <g class="step s3"><rect x="252" y="230" width="104" height="216" rx="6" fill="url(#side)"/><rect x="246" y="220" width="104" height="216" rx="6" fill="url(#pg)"/><use href="#lines" x="246" y="220"/><g stroke="#13233F" stroke-width="2" fill="none"><rect x="268" y="290" width="22" height="22" rx="3"/><rect x="306" y="290" width="22" height="22" rx="3"/><path d="M279 312 v14 h38 v-14"/><rect x="287" y="326" width="22" height="22" rx="3" fill="#D4AF5F" stroke="#D4AF5F"/></g><text x="298" y="420" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" fill="#13233F">Metodología</text></g>
+        <g class="step s4"><rect x="358" y="170" width="104" height="276" rx="6" fill="url(#side)"/><rect x="352" y="160" width="104" height="276" rx="6" fill="url(#pg)"/><use href="#lines" x="352" y="160"/><g><rect x="370" y="300" width="14" height="40" rx="2" fill="#27416E"/><rect x="390" y="276" width="14" height="64" rx="2" fill="#27416E"/><rect x="410" y="252" width="14" height="88" rx="2" fill="#D4AF5F"/><rect x="430" y="286" width="14" height="54" rx="2" fill="#27416E"/></g><text x="404" y="420" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" fill="#13233F">Resultados</text></g>
+        <g class="step s5"><rect x="464" y="110" width="104" height="336" rx="6" fill="url(#side)"/><rect x="458" y="100" width="104" height="336" rx="6" fill="url(#pg)"/><use href="#lines" x="458" y="100"/><circle cx="510" cy="250" r="30" fill="none" stroke="#D4AF5F" stroke-width="3"/><path d="M496 250 l10 10 l18 -20" fill="none" stroke="#13233F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="510" y="420" text-anchor="middle" font-family="Source Sans 3, sans-serif" font-size="13" font-weight="600" fill="#13233F">Sustentación</text></g>
+        <g class="cap"><path d="M510 30 l58 24 l-58 24 l-58 -24z" fill="#D4AF5F"/><path d="M482 66 v18 q28 16 56 0 v-18 l-28 12z" fill="#B38E3E"/><path d="M566 55 v26" stroke="#D4AF5F" stroke-width="3"/><circle cx="566" cy="84" r="5" fill="#D4AF5F"/></g>
+        <path d="M60 330 C 140 300, 170 260, 230 250 S 330 190, 390 150 S 470 95, 500 82" fill="none" stroke="#D4AF5F" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity=".9"/>
+      </svg>
     </div>
   </section>
 
-  <section class="services" id="servicios">
+  <section class="who" aria-label="A quién acompañamos">
     <div class="wrap">
-      <p class="eyebrow">Servicios</p>
-      <h2>Cuatro líneas de acompañamiento</h2>
-      <p style="color:var(--muted);max-width:680px">Cada servicio se contrata completo o por etapas, según lo que usted necesite.</p>
-      <div class="grid">
-        <article class="card">
-          <span class="num">01</span>
-          <h3>Asesoría en trabajos de grado y tesis</h3>
-          <p>Acompañamiento metodológico para pregrado, especialización y maestría.</p>
-          <ul>
-            <li>Problema, pregunta de investigación y objetivos</li>
-            <li>Marco teórico y estado del arte</li>
-            <li>Diseño metodológico e instrumentos</li>
-            <li>Revisión de avances con observaciones detalladas</li>
-            <li>Preparación de la sustentación</li>
-          </ul>
-        </article>
-        <article class="card">
-          <span class="num">02</span>
-          <h3>Formulación y evaluación de proyectos</h3>
-          <p>Asesoría técnica para entidades territoriales, organizaciones y profesionales.</p>
-          <ul>
-            <li>Formulación en la Metodología General Ajustada (MGA)</li>
-            <li>Estructuración para el Sistema General de Regalías</li>
-            <li>Proyectos PDET y de planes de desarrollo</li>
-            <li>Evaluación financiera, económica y social</li>
-            <li>Revisión previa a la radicación</li>
-          </ul>
-        </article>
-        <article class="card">
-          <span class="num">03</span>
-          <h3>Corrección de estilo y normas</h3>
-          <p>Para que su documento cumpla los requisitos de su programa o revista.</p>
-          <ul>
-            <li>Corrección ortográfica, gramatical y de redacción académica</li>
-            <li>Normas APA (7.ª edición) e ICONTEC</li>
-            <li>Revisión de citas y referencias</li>
-            <li>Orientación en el uso correcto de fuentes</li>
-          </ul>
-        </article>
-        <article class="card">
-          <span class="num">04</span>
-          <h3>Análisis de datos e instrumentos</h3>
-          <p>Apoyo en la parte cuantitativa y cualitativa de su investigación.</p>
-          <ul>
-            <li>Diseño y validación de encuestas y entrevistas</li>
-            <li>Análisis estadístico descriptivo e inferencial</li>
-            <li>Interpretación de resultados, tablas y gráficos</li>
-            <li>Explicación de los análisis para la sustentación</li>
-          </ul>
-        </article>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6 L36 13 L20 20 L4 13 Z" fill="none" stroke="#D4AF5F" stroke-width="2" stroke-linejoin="round"/><path d="M10 16 v9 q10 7 20 0 v-9" fill="none" stroke="#D4AF5F" stroke-width="2"/></svg>
+        <p><strong>Estudiantes de pregrado</strong><span>Trabajos de grado, monografías y proyectos de investigación.</span></p>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 8 h18 l6 6 v20 h-24 z" fill="none" stroke="#D4AF5F" stroke-width="2" stroke-linejoin="round"/><path d="M13 20 h14 M13 25 h14 M13 30 h9" stroke="#D4AF5F" stroke-width="2" stroke-linecap="round"/></svg>
+        <p><strong>Especialización y maestría</strong><span>Tesis, artículos y preparación de la sustentación.</span></p>
+      </div>
+      <div>
+        <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 34 h28 M9 34 v-14 M17 34 v-14 M23 34 v-14 M31 34 v-14 M5 18 L20 8 L35 18 Z" fill="none" stroke="#D4AF5F" stroke-width="2" stroke-linejoin="round"/></svg>
+        <p><strong>Entidades y organizaciones</strong><span>Proyectos de inversión pública en MGA, SGR y PDET.</span></p>
       </div>
     </div>
   </section>
 
-  <section id="proceso">
+  <section class="band" id="servicios">
     <div class="wrap">
-      <p class="eyebrow">Cómo trabajamos</p>
-      <h2>Cinco pasos, de la primera conversación a la entrega</h2>
-      <ol class="steps">
-        <li><strong>Diagnóstico</strong><span>Nos cuenta en qué etapa está, qué le pide su programa y su fecha límite.</span></li>
-        <li><strong>Propuesta</strong><span>Le enviamos un plan con alcance, cronograma y valor.</span></li>
-        <li><strong>Acompañamiento</strong><span>Sesiones y revisión de avances con observaciones escritas.</span></li>
-        <li><strong>Revisión final</strong><span>Coherencia, normas de presentación y calidad de las fuentes.</span></li>
-        <li><strong>Entrega</strong><span>Preparación para la sustentación o la radicación.</span></li>
-      </ol>
+      <div class="services-head">
+        <h2>Cuatro formas de acompañarle</h2>
+        <p class="lead">Cada servicio se contrata completo o por etapas. Usted conserva la autoría; nosotros le damos el método, la revisión y la seguridad para avanzar.</p>
+      </div>
+      <div class="svc">
+        <article>
+          <div class="ico"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 10 q7 -4 14 0 v22 q-7 -4 -14 0 z M20 10 q7 -4 14 0 v22 q-7 -4 -14 0" fill="none" stroke="#13233F" stroke-width="2" stroke-linejoin="round"/><path d="M24 17 h6 M24 22 h6" stroke="#8A6A2B" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div>
+            <h3>Trabajos de grado y tesis</h3>
+            <p>Acompañamiento metodológico en pregrado, especialización y maestría.</p>
+            <ul>
+              <li>Problema, pregunta de investigación y objetivos</li>
+              <li>Marco teórico y estado del arte</li>
+              <li>Diseño metodológico e instrumentos</li>
+              <li>Revisión de avances y preparación de la sustentación</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="ico"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="8" width="28" height="26" rx="3" fill="none" stroke="#13233F" stroke-width="2"/><path d="M6 15 h28" stroke="#13233F" stroke-width="2"/><path d="M12 28 l6 -6 l4 4 l7 -8" fill="none" stroke="#8A6A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div>
+            <h3>Proyectos de inversión</h3>
+            <p>Formulación y evaluación para entidades, organizaciones y profesionales.</p>
+            <ul>
+              <li>Formulación en la MGA</li>
+              <li>Estructuración para el Sistema General de Regalías</li>
+              <li>Proyectos PDET y de planes de desarrollo</li>
+              <li>Evaluación financiera, económica y social</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="ico"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M9 6 h16 l6 6 v22 h-22 z" fill="none" stroke="#13233F" stroke-width="2" stroke-linejoin="round"/><path d="M14 18 h12 M14 23 h8" stroke="#13233F" stroke-width="2" stroke-linecap="round"/><path d="M22 30 l12 -12 l3 3 l-12 12 h-3 z" fill="#D4AF5F" stroke="#8A6A2B" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+          <div>
+            <h3>Corrección de estilo y normas</h3>
+            <p>Para que su documento cumpla lo que exige su programa o revista.</p>
+            <ul>
+              <li>Redacción académica, ortografía y gramática</li>
+              <li>Normas APA (7.ª edición) e ICONTEC</li>
+              <li>Revisión de citas y referencias</li>
+              <li>Uso correcto de fuentes</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="ico"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 34 h28" stroke="#13233F" stroke-width="2" stroke-linecap="round"/><rect x="9" y="22" width="5" height="12" fill="none" stroke="#13233F" stroke-width="2"/><rect x="18" y="14" width="5" height="20" fill="#D4AF5F" stroke="#8A6A2B" stroke-width="1.5"/><rect x="27" y="18" width="5" height="16" fill="none" stroke="#13233F" stroke-width="2"/><path d="M8 12 q8 -8 16 -2 t10 -4" fill="none" stroke="#8A6A2B" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div>
+            <h3>Análisis de datos</h3>
+            <p>Apoyo en la parte cuantitativa y cualitativa de su investigación.</p>
+            <ul>
+              <li>Diseño y validación de encuestas y entrevistas</li>
+              <li>Estadística descriptiva e inferencial</li>
+              <li>Interpretación de resultados, tablas y gráficos</li>
+              <li>Explicación de los análisis para defenderlos</li>
+            </ul>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="ethics">
+  <section class="band process" id="proceso">
     <div class="wrap">
-      <p class="eyebrow">Nuestro compromiso</p>
-      <h2>Integridad académica ante todo</h2>
-      <ul>
-        <li><strong>Su autoría</strong>El trabajo es siempre suyo: orientamos, revisamos y enseñamos, no suplantamos.</li>
-        <li><strong>Fuentes reales</strong>No inventamos datos, citas ni referencias; toda fuente se verifica.</li>
-        <li><strong>Confidencialidad</strong>Su información y sus documentos se manejan con total reserva.</li>
-      </ul>
+      <h2>Cómo trabajamos</h2>
+      <p class="lead">Cinco pasos claros, de la primera conversación a la entrega final.</p>
+      <div class="path">
+        <svg class="line" viewBox="0 0 100 4" preserveAspectRatio="none" aria-hidden="true"><line x1="10" y1="2" x2="90" y2="2" stroke="#13233F" stroke-width="2" stroke-dasharray="1.2 1.2" vector-effect="non-scaling-stroke"/></svg>
+        <ol>
+          <li><div class="dot">1</div><div><strong>Diagnóstico</strong><span>Nos cuenta en qué etapa está, qué le pide su programa y su fecha límite.</span></div></li>
+          <li><div class="dot">2</div><div><strong>Propuesta</strong><span>Le enviamos un plan con alcance, cronograma y valor.</span></div></li>
+          <li><div class="dot">3</div><div><strong>Acompañamiento</strong><span>Sesiones y revisión de avances con observaciones escritas.</span></div></li>
+          <li><div class="dot">4</div><div><strong>Revisión final</strong><span>Coherencia, normas de presentación y calidad de las fuentes.</span></div></li>
+          <li><div class="dot">5</div><div><strong>Entrega</strong><span>Lo preparamos para la sustentación o la radicación.</span></div></li>
+        </ol>
+      </div>
     </div>
   </section>
 
-  <section class="contact" id="contacto">
+  <section class="band ethics" id="compromiso">
     <div class="wrap">
-      <div class="box">
-        <p class="eyebrow">Cotización sin costo</p>
+      <div>
+        <h2>Integridad académica, sin atajos</h2>
+        <p class="lead" style="color:#C9D4E6">Nuestro trabajo es enseñarle el método. Por eso cuidamos tres principios en cada asesoría.</p>
+      </div>
+      <div class="seal">
+        <div>
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#D4AF5F" stroke-width="2"/><circle cx="28" cy="22" r="7" fill="none" stroke="#fff" stroke-width="2"/><path d="M16 40 q12 -12 24 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <p><strong>Su autoría</strong>El trabajo es siempre suyo: orientamos, revisamos y enseñamos, nunca suplantamos.</p>
+        </div>
+        <div>
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#D4AF5F" stroke-width="2"/><circle cx="25" cy="25" r="9" fill="none" stroke="#fff" stroke-width="2"/><path d="M32 32 l8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <p><strong>Fuentes reales</strong>No inventamos datos, citas ni referencias; cada fuente se verifica en bases académicas.</p>
+        </div>
+        <div>
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#D4AF5F" stroke-width="2"/><rect x="19" y="26" width="18" height="14" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M22 26 v-4 a6 6 0 0 1 12 0 v4" fill="none" stroke="#fff" stroke-width="2"/></svg>
+          <p><strong>Confidencialidad</strong>Su información y sus documentos se manejan con total reserva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contacto">
+    <div class="wrap">
+      <div>
         <h2>Cuéntenos sobre su proyecto</h2>
-        <p style="color:var(--muted)">Escríbanos con su programa, la etapa en la que está y su fecha de entrega. Le respondemos con una propuesta en un máximo de 48 horas hábiles.</p>
-        <a class="mail" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">contacto@metodoyrigor.co</a><br>
-        <a class="btn" href="mailto:contacto@metodoyrigor.co?subject=Solicitud%20de%20cotizaci%C3%B3n">Escribir un correo</a>
+        <p class="lead">La cotización es personalizada y sin costo. Le respondemos con una propuesta en un máximo de 48 horas hábiles.</p>
+        <p>Escríbanos directamente a:</p>
+        <a class="mail" href="mailto:contacto@metodoyrigor.co">contacto@metodoyrigor.co</a>
+        <p class="note" style="margin-top:18px">Atendemos desde Bogotá a todo el país, en sesiones virtuales o presenciales.</p>
       </div>
+      <form id="f" novalidate>
+        <div><label for="n">Nombre</label><input id="n" name="n" autocomplete="name" required></div>
+        <div><label for="p">Programa o entidad</label><input id="p" name="p" placeholder="Ej.: Maestría en Administración"></div>
+        <div><label for="s">Servicio</label>
+          <select id="s" name="s">
+            <option>Trabajo de grado o tesis</option>
+            <option>Proyecto de inversión</option>
+            <option>Corrección de estilo y normas</option>
+            <option>Análisis de datos</option>
+            <option>Aún no lo sé</option>
+          </select></div>
+        <div><label for="d">Fecha de entrega</label><input id="d" name="d" type="date"></div>
+        <div class="full"><label for="m">¿En qué etapa está y qué necesita?</label><textarea id="m" name="m"></textarea></div>
+        <button class="btn full" type="submit">Preparar correo de cotización</button>
+        <p class="note full">Al enviar se abrirá su programa de correo con el mensaje listo para contacto@metodoyrigor.co.</p>
+        <p id="ok" role="status">Se abrió su programa de correo. Si no apareció, escríbanos directamente a contacto@metodoyrigor.co.</p>
+      </form>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <a class="logo sm" href="#inicio" aria-label="Volver al inicio">
-      <span class="w">MÉTODO</span>
-      <span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span>
-      <span class="w">RIGOR</span>
-      <span class="sub">ASESORÍAS</span>
-    </a>
-    <p>Bogotá, Colombia · <a href="mailto:contacto@metodoyrigor.co">contacto@metodoyrigor.co</a></p>
-    <p>© 2026 Método &amp; Rigor Asesorías</p>
+    <a class="logo" href="#inicio" aria-label="Volver al inicio"><b>MÉTODO</b><span class="amp" aria-hidden="true"><i></i><span>&amp;</span><i></i></span><b>RIGOR</b></a>
+    <p style="margin:0">Bogotá, Colombia · <a href="mailto:contacto@metodoyrigor.co">contacto@metodoyrigor.co</a></p>
+    <p style="margin:0">© 2026 Método &amp; Rigor Asesorías</p>
   </div>
 </footer>
 
+<script>
+{
+  const f = document.getElementById('f');
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim();
+    const nombre = v('n');
+    if (!nombre) { document.getElementById('n').focus(); return; }
+    const body = 'Nombre: ' + nombre + '\nPrograma o entidad: ' + v('p') + '\nServicio: ' + v('s') + '\nFecha de entrega: ' + (v('d') || 'por definir') + '\n\n' + v('m');
+    location.href = 'mailto:contacto@metodoyrigor.co?subject=' + encodeURIComponent('Solicitud de cotización - ' + v('s')) + '&body=' + encodeURIComponent(body);
+    document.getElementById('ok').style.display = 'block';
+  });
+}
+</script>
 </body>
 </html>
